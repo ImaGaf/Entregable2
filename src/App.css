@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+.App{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+h3{
+  text-align: center;
+}
+
+.card-container{
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.9rem;
+  background-color: rgba(156, 154, 151, 0.395);
+  box-shadow: 0 0 5px 3px rgb(48, 51, 61);
+}
+
+.content{
+  display: flex;
+  width: 110%;
+}
+
+.wetherImg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.details{
+  text-align: left;
+  width: 50%;
+  padding-top: 1rem;
+  line-height:29px;
+}
+
+.title{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+}
+
+button{
+  width: 100px;
+  border-radius: 4px;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem;
+  background-color: rgb(156, 154, 151,0.6);
+}
+
+button:hover{
+  background-color: rgb(156, 154, 151);
+  transform: scale(1.03);
+}
+
+span{
+  font-size: 18px;
+  color: rgb(52, 52, 154);
+  font-weight: bold;
+}

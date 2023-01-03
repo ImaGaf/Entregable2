@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(https://energiatoday.com/wp-content/uploads/2020/04/clima_1586074585.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

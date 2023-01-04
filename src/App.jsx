@@ -5,8 +5,10 @@ import './App.css'
 function App() {
 
   const [data, setdata] = useState({})
-  const [longitude,setlongitude] = useState(null)
-  const [latitude, setlatitude] = useState(null)
+  const [location,setlocation] = useState({
+    longitude: null,
+    latitude:null
+  })
   const [isunit, setisunit] = useState(true)
   let icon = `http://openweathermap.org/img/wn/${data.weather?.[0].icon}@2x.png`;
   
@@ -16,15 +18,17 @@ function App() {
 
   function success(pos) {
     const crd = pos.coords;
-    setlongitude(crd.longitude)
-    setlatitude(crd.latitude)
+    setlocation({longitude:crd.longitude, latitude:crd.latitude});
   }
-  navigator.geolocation.getCurrentPosition(success)
   
   useEffect(()=>{
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=883677c2ced9f2e407540823ef0e2046&units=${ isunit ? "metric" : "imperial"}`)
+    navigator.geolocation.getCurrentPosition(success)
+  },[])
+
+  useEffect(()=>{
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=883677c2ced9f2e407540823ef0e2046&units=${ isunit ? "metric" : "imperial"}`)
     .then(res => setdata(res.data));
-  },[isunit,latitude])
+  },[isunit,location])
 
   return (
     <div className="App">

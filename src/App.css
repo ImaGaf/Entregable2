@@ -22,6 +22,7 @@ h3{
 .card-container{
   border-radius: 30px;
   display: flex;
+  width: 410px;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
@@ -32,19 +33,18 @@ h3{
 
 .content{
   display: flex;
-  width: 110%;
+  width: 100%;
 }
 
 .wetherImg{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   width: 50%;
+  padding-right: 2rem;
 }
 
 .details{
   text-align: left;
-  width: 50%;
+  width: 60%;
   padding-top: 1rem;
   line-height:29px;
 }
